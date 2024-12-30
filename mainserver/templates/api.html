@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection API Documentation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        pre {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .text-param {
+            color: #17a2b8;
+        }
+        .text-value {
+            color: #28a745;
+        }
+        .text-quotes {
+            color: #ffc107;
+        }
+        .copy-button {
+            float: right;
+        }
+        .api-endpoint {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Fake News Detection API Documentation</h1>
+    
+    <h2>Endpoint</h2>
+    <div class="api-endpoint">
+        POST /api/predict/
+    </div>
+
+    <h2 class="mt-4">Request Format</h2>
+    <p>Use the following format to send a request to the Fake News Detection API:</p>
+    <pre id="request-example">
+{
+    <span class="text-quotes">"text"</span>: <span class="text-quotes">"Your news content here"</span>
+}
+    </pre>
+    <button class="btn btn-secondary copy-button" onclick="copyToClipboard('#request-example')">Copy</button>
+
+    <h3 class="mt-4">Parameters</h3>
+    <ul>
+        <li><span class="text-param">text</span>: <span class="text-muted">String</span> - The news article text you want to analyze. This parameter is required.</li>
+    </ul>
+
+    <h2 class="mt-4">Response Format</h2>
+    <p>The API returns a JSON response with the following structure:</p>
+    <pre id="response-example">
+{
+    <span class="text-quotes">"text"</span>: <span class="text-quotes">"Your news content here"</span>,
+    <span class="text-quotes">"prediction"</span>: <span class="text-value">"Real"</span> or <span class="text-value">"Fake"</span>,
+    <span class="text-quotes">"confidence"</span>: <span class="text-value">0.97</span>,
+    <span class="text-quotes">"facts_checked"</span>: <span class="text-quotes">"Facts information here"</span>
+}
+    </pre>
+    <button class="btn btn-secondary copy-button" onclick="copyToClipboard('#response-example')">Copy</button>
+
+    <h3 class="mt-4">Response Fields</h3>
+    <ul>
+        <li><span class="text-param">text</span>: <span class="text-muted">String</span> - The original news text that was analyzed.</li>
+        <li><span class="text-param">prediction</span>: <span class="text-muted">String</span> - The result of the fake news detection. Either <span class="text-value">"Real"</span> or <span class="text-value">"Fake"</span>.</li>
+        <li><span class="text-param">confidence</span>: <span class="text-muted">Float</span> - A confidence score (0-1) indicating the certainty of the prediction.</li>
+        <li><span class="text-param">facts_checked</span>: <span class="text-muted">String</span> - Any fact-checked information related to the news content.</li>
+    </ul>
+    
+    <h2 class="mt-4">Example Request</h2>
+    <pre id="example-request">
+curl -X POST "http://127.0.0.1:8000/api/predict/" -H "Content-Type: application/json" -d '{
+    <span class="text-quotes">"text"</span>: <span class="text-quotes">"Breaking news content..."</span>
+}'
+    </pre>
+    <button class="btn btn-secondary copy-button" onclick="copyToClipboard('#example-request')">Copy</button>
+
+    <h2 class="mt-4">Example Response</h2>
+    <pre id="example-response">
+{
+    <span class="text-quotes">"text"</span>: <span class="text-quotes">"Breaking news content..."</span>,
+    <span class="text-quotes">"prediction"</span>: <span class="text-value">"Fake"</span>,
+    <span class="text-quotes">"confidence"</span>: <span class="text-value">0.89</span>,
+    <span class="text-quotes">"facts_checked"</span>: <span class="text-quotes">"Fact-check details here..."</span>
+}
+    </pre>
+    <button class="btn btn-secondary copy-button" onclick="copyToClipboard('#example-response')">Copy</button>
+
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript to handle copy button functionality -->
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<textarea>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+        alert("Copied!");
+    }
+</script>
+
+</body>
+</html>

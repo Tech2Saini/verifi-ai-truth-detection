@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% load static %}
+    <style>
+        .container {
+            max-width: 1100px;
+        }
+        
+        h1, h2, h5 {
+            color: #2c3e50;
+        }
+        
+        p {
+            color: #7f8c8d;
+        }
+        
+        img {
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.1);
+        }
+        
+        button {
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background-color: #1abc9c;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">About Us</h1>
+            <p class="text-muted">Discover more about our mission, values, and the team behind "FND Verify".</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{% static 'images/76807486-a10f-4df0-8924-ce93e8273298.jpeg' %}" alt="About Us" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">Our Mission</h2>
+                <p>
+                    At <strong>FND Verify</strong>, we are committed to combating the spread of misinformation by providing a 
+                    reliable and intelligent platform that detects and verifies the authenticity of news articles. 
+                    Our aim is to foster a well-informed society by leveraging cutting-edge technologies in 
+                    machine learning and natural language processing.
+                </p>
+                <h2 class="fw-bold mt-4">Our Vision</h2>
+                <p>
+                    To create a world where truth prevails, enabling individuals and organizations to make 
+                    informed decisions without falling victim to fake news and misinformation.
+                </p>
+            </div>
+        </div>
+    
+        <div class="mt-5">
+            <h2 class="fw-bold text-center mb-4">Meet the Team</h2>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <img src="https://codesbird.github.io/portfolio/files/WhatsApp%20Image%202024-11-26%20at%2000.08.13_4b36a4cb.jpg" width="150px" class="rounded-circle mb-3 shadow" alt="Team Member">
+                    <h5 class="fw-bold">Monu Saini</h5>
+                    <p>Team Leader</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3 shadow" alt="Team Member">
+                    <h5 class="fw-bold">Mohd Suhail</h5>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3 shadow" alt="Team Member">
+                    <h5 class="fw-bold">Mohammad Tauheed</h5>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3 shadow" alt="Team Member">
+                    <h5 class="fw-bold">Mohammad Zaid</h5>
+                    <p>Data Analyst</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="mt-5">
+            <h2 class="fw-bold text-center mb-4">Our Technology</h2>
+            <p>
+                Our platform integrates advanced machine learning algorithms like <strong>XGBoost</strong> and <strong>Natural 
+                Language Processing (NLP)</strong> to classify and verify news authenticity. Using the power of frameworks 
+                such as Django for backend development and Bootstrap for responsive design, we ensure an efficient 
+                and user-friendly experience. Data insights are enhanced by analyzing user feedback and integrating 
+                modern analytics tools.
+            </p>
+        </div>
+    
+        <div class="mt-5 text-center">
+            <h2 class="fw-bold mb-4">Join Us</h2>
+            <p>If you share our passion for technology and truth, connect with us today!</p>
+            <button class="btn btn-primary">Contact Us</button>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
