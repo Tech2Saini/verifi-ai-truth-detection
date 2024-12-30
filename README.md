@@ -1,111 +1,151 @@
-# kSecure
+# 📰 Fake News Detection and Fact-Checking System
 
-**kSecure** is an innovative web extension project designed to enhance internet security and empower users by identifying manipulative practices, ensuring safe browsing, and promoting ethical web design.
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg?style=flat-square&logo=python)](https://www.python.org/)
+![License](https://camo.githubusercontent.com/6cd0120cc4c5ac11d28b2c60f76033b52db98dac641de3b2644bb054b449d60c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667)
 
----
 
-## 🔑 **Project Vision**
-Create a secure, transparent, and user-centric internet by:
-- Preventing manipulative practices like dark patterns.
-- Promoting safe and ethical browsing experiences.
-- Empowering users with tools to safeguard their personal information.
-- Encouraging ethical design standards among web developers.
+
+A machine learning-based system that detects fake news and checks the factual correctness of news content using external APIs and datasets. This project aims to enhance media reliability by leveraging cutting-edge AI techniques.
 
 ---
 
-## 🚀 **Features**
-### 1. **Dark Pattern Detection**
-   - Highlights manipulative elements (e.g., hidden fees, forced continuity) in e-commerce websites.
-   - Analyzes segments of the DOM to detect deceptive design.
+## 🚀 Project Overview
 
-### 2. **Enhanced Security**
-   - Integrates with VPNs for secure browsing.
-   - Warns users about unsafe links and malicious practices.
+In today's world, fake news spreads rapidly across digital platforms, creating misinformation and confusion. Our *Fake News Detection and Fact-Checking System* automatically verifies the authenticity of news articles and provides factual corrections using a fact-checking API.
 
-### 3. **User Empowerment**
-   - Tools to identify and block suspicious or intrusive elements.
-   - Provides visual cues for transparency and safety.
-
-### 4. **Ethical Web Design Advocacy**
-   - Encourages developers to avoid manipulative design.
-   - Promotes responsible web practices through detailed analytics.
+### Key Features
+- **Fake News Detection:** Classifies news articles as true or fake using machine learning models trained on labeled datasets.
+- **Fact Checking:** Takes the entered news and returns factually verified information.
+- **User-Friendly Interface:** A web-based system with a simple, intuitive design for users to input news articles.
+- **Modular Design:** Clear separation between news detection and fact-checking components, enabling easy updates.
 
 ---
 
-## 📚 **Tech Stack**
-### **Languages & Tools**
-- **JavaScript:** Core logic for DOM manipulation and feature integration.
-- **HTML/CSS:** Extension interface design and user-friendly visuals.
-- **Python (Optional):** Backend processing for advanced analytics.
-- **Chrome Extension APIs:** For browser interactions and feature implementation.
+## 📋 Table of Contents
+1. [Project Objectives](#objectives)
+2. [Technology Stack](#tech-stack)
+3. [Data Preprocessing](#data-preprocessing)
+4. [Model Training](#model-training)
+5. [Fact-Checking](#fact-checking)
+6. [Challenges](#challenges)
+7. [Future Scope](#future-scope)
+8. [How to Run](#how-to-run)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ---
 
-## ⚙️ **Installation Guide**
-### 1. **Clone the Repository**
-```bash
-git clone https://github.com/tech2saini/ksecure.git
-```
+## 🎯 Objectives <a name="objectives"></a>
 
-### 2. **Load the Extension**
-1. Go to `chrome://extensions` in your browser.
-2. Enable **Developer Mode** (toggle in the top-right corner).
-3. Click **Load Unpacked** and select the `ksecure` folder.
+1. Identify and detect fake news articles.
+2. Provide accurate fact-checks for the input text.
+3. Ensure a reliable and user-friendly interface to enhance user experience.
+4. Improve accuracy through model optimization.
 
 ---
 
-## 🛠️ **Usage Instructions**
-1. Navigate to any e-commerce website.
-2. Activate the extension by clicking on the kSecure icon.
-3. The extension will:
-   - Analyze the page for dark patterns.
-   - Highlight suspicious elements.
-   - Provide insights on manipulative practices.
+## 🛠️ Technology Stack <a name="tech-stack"></a>
+
+- **Programming Language:** Python
+- **Machine Learning:** Scikit-learn, TensorFlow
+- **Web Framework:** Django
+- **Database:** SQLite for storage of user-submitted news articles
+- **Frontend:** HTML5, CSS3, Bootstrap
+- **APIs:** External Fact-Checking API
 
 ---
 
-## 📊 **Project Goals**
-1. Implement robust **dark pattern detection algorithms**.
-2. Integrate with reliable **VPN services** for added user privacy.
-3. Develop a user-friendly interface to display analysis results.
-4. Build a strong backend for storing and analyzing user feedback.
+## 🧹 Data Preprocessing <a name="data-preprocessing"></a>
+
+- Datasets: `true.csv`, `false.csv` from Kaggle.
+- Preprocessing steps include:
+  - Cleaning and normalizing the text.
+  - Tokenization and vectorization (TF-IDF).
+  - Handling missing or noisy data.
 
 ---
 
-## 🧑‍💻 **Contributing**
-Contributions are welcome! Please follow these steps:
+## 🧠 Model Training <a name="model-training"></a>
+
+- **Classifier Used:** Logistic Regression, Random Forest, or other classifiers.
+- **Metrics:** Accuracy, Precision, Recall, F1 Score.
+- **Training Process:**
+  - Train the model on a dataset containing true and false news articles.
+  - Test and evaluate model performance using cross-validation.
+
+---
+
+## 🔎 Fact-Checking <a name="fact-checking"></a>
+
+The fact-checking feature uses an external API to:
+- Extract key information from the news article.
+- Return verified factual content to counter the input news.
+- Display corrected information in the web app.
+
+---
+
+## ⚔️ Challenges <a name="challenges"></a>
+
+1. **Data Imbalance:** Balancing true and false news in the dataset.
+2. **Fact-Checking API:** Finding an efficient, accurate API for real-time fact-checking.
+3. **Accuracy:** Continuously improving the model's performance and reliability.
+
+---
+
+## 🚀 Future Scope <a name="future-scope"></a>
+
+- **Expand the Dataset:** Continuously improve detection accuracy with larger datasets.
+- **API Integration:** Enhance the fact-checking feature with more reliable and broader APIs.
+- **Multi-language Support:** Add support for fake news detection in various languages.
+
+---
+
+## 🏃 How to Run <a name="how-to-run"></a>
+
+### Running the Application:
+  - Python 3.9
+
+1. Clone the repository:
+   ```bash
+   https://github.com/Tech2Saini/FakeNewsDetection.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd fake-news-detection
+   ```
+3. Prerequisites:
+  - Required Python libraries (install via `requirements.txt`):
+    ```bash
+    pip install -r requirements.txt
+    ```
+  
+4. Run the Flask app:
+   ```bash
+   python manage.py runserver
+   ```
+5. Access the application on `http://127.0.0.1:8000/` in your browser.
+
+---
+
+## 🤝 Contributing <a name="contributing"></a>
+
+We welcome contributions to this project! Feel free to:
 1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
 
 ---
 
-## 🤝 **Collaboration Opportunities**
-Looking for collaborators to:
-- Enhance the detection algorithm.
-- Add support for other browsers like Firefox and Edge.
-- Build additional tools for ethical design advocacy.
+
+## 💬 Contact
+
+For any queries or suggestions, feel free to reach out:
+- **LinkedIn:** [Monu Saini](https://www.linkedin.com/in/monupydev)
 
 ---
 
-## 📝 **License**
-This project is licensed under the [MIT License](LICENSE).
+## 📜 License <a name="license"></a>
 
----
-
-## 🌟 **Acknowledgments**
-- Inspiration from internet security and user empowerment movements.
-- Guidance and support from the developer community.
-
----
-
-## 📬 **Contact**
-- **Developer:** Monu Saini
-- **Portfolio:** [tech2saini](https://codesbird.github.io/portfolio/)
-- **GitHub:** [tech2saini](https://github.com/tech2saini)
-
----
-
-**Empower yourself with kSecure and browse safely!**
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
