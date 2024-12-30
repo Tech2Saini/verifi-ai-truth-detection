@@ -107,11 +107,11 @@ The fact-checking feature uses an external API to:
 
 1. Clone the repository:
    ```bash
-   https://github.com/Tech2Saini/FakeNewsDetection.git
+   https://github.com/Tech2Saini/verify-ai-truth-detection.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd fake-news-detection
+   cd verify-ai-truth-detection
    ```
 3. Prerequisites:
   - Required Python libraries (install via `requirements.txt`):
